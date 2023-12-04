@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="valid.js"></script>
+</head>
+<body>
+<form name="loginForm" onsubmit="return validateForm()" method="post">
+    <h2>Login Form</h2>
+   <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Password</label>
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase, lowercase letter, and at least 8 or more characters">
+        <div class="error" id="passwordErr"></div>
+    </div><br/>
+    <div class="row">
+        <input type="submit" value="Login">
+    </div>
+    <a href="forget.html" style=" margin-left:20px; font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Forget password ?</a>
+    </div><br /><br /><br />
+<a href="signin.html" style="font-family:'Play', sans-serif;">&nbsp;Don't have account? Sign Up</a>
+
+</form>
+</body>
+</html>

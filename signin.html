@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="signin.css">
+    <script src="validator.js"></script>
+</head>
+<body>
+<form name="signinForm" onsubmit="return validateForm()" method="post">
+    <h2>Sign In</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label>Password</label>
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase, lowercase letter, and at least 8 or more characters">
+        <div class="error" id="passwordErr"></div>
+    </div><br/>
+    <div class="row">
+        <input type="submit" value="Sign In">
+    </div>
+    <a href="login.html" style="font-family:'Play', sans-serif;">&nbsp;Have an account? Login</a>
+</form>
+</body>
+</html>

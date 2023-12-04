@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+
+<h2>Checkout Form</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Detail</h3>
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="name" placeholder="Name" required>
+            <label for="email"> Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <label for="adr"> Phone</label>
+            <input type="text" id="adr" name="phone" placeholder="Phone" required>
+            <label for="city"> Amount</label>
+            <input type="text" id="city" name="amount" placeholder="Amount">
+          </div>
+
+          <div class="col-50">
+            <h3>Payment Detail</h3>
+            <label for="fname">Please select your mode of Payment</label>
+           
+             <div class="dropdown">
+                <div class="select-box">
+                <select>
+                  <option> Credit Card</option>
+                   <option> Debit Card</option>
+                    <option> E-Wallet</option>
+
+                </select>
+             </div><br>
+             </div>
+            <label for="ccnum">Card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="Card number" required>
+             <label for="ccnum">CVV</label>
+            <input type="text" id="ccnum" name="cvv" placeholder="CVV" required>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Valid from</label>
+                <input type="text" id="validfrom" name="validfrom" placeholder="Valid From">
+              </div>
+              <div class="col-50">
+                <label for="expyear">To</label>
+                <input type="text" id="validto" name="validto" placeholder="To">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" required name="terms"> I Agree with the above details.
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

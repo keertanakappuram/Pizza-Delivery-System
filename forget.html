@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forget Password</title>
+<link rel='stylesheet' href='forget.css' type='text/css' />      
+</head>
+<body onload='document.form.email.focus()'>
+<form name="form" action="#">
+ <h2>Forget Password</h2>
+ <h5 style="font-size:12px; color:yellow;">Enter your email here that you used on your account. We will send a message on your mail to reset your password.</h5>
+ <br/>
+ <div class="row">
+ <label>Email Address</label> 
+<input type='text' name='email'/>
+</div><br/>
+<div class="row">
+<input type="submit" name="submit" value="Send" onclick="ValidateEmail(document.form.email)"/></div><br/><br/>
+<a href="login.html" style="text-decoration:none;">Go back to Login page</a>
+</form>
+<script>
+	function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form.email.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form.email.focus();
+return false;
+}
+}
+</script>
+</body>
+</html>
